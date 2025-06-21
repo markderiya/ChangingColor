@@ -1,0 +1,90 @@
+@import url("reset.css");
+
+.wrapper {
+    min-height: 100vh;
+    padding: 100px;
+}
+
+.page {
+}
+.page__container {
+}
+.page__header {
+}
+.page__title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    
+}
+.page__text {
+    line-height: 150%;
+}
+.page__text p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+body {
+    transition: all 0.3s ease 0s;
+    background-color: #fff;
+    color: #333;
+}
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333 ;
+        color: #fff;
+    }
+} */
+
+ html.dark body {
+    color: #fff;
+    background-color: #333 ;
+ }
+ html.light body {
+    color: #333 ;
+    background-color: #fff ;
+ }
+
+ .page__action{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+ }
+
+html.dark .page__theme {
+    height: 50px;
+    width: 50px;
+    background: url(../img/icon-sun.png) 0 0 / 100% no-repeat;
+}
+
+html.light .page__theme {
+    height: 50px;
+    width: 50px;
+    background: url(../img/icon-moon.png) 0 0 / 100% no-repeat;
+}
+
+.page__reset {
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+}
+.page__reset.active {
+    opacity: 1;
+    visibility: visible;
+}
+.page__reset::before {
+    content: 'x';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    font-size: 10px;
+    border-radius: 50%;
+    line-height: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: #666;
+
+}
